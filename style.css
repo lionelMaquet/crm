@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+
+}
+
+.table {
+  width: 100%;
+  display: flex;
+}
+
+.col {
+  width: 33%;
+}
+
+.row {
+  width: 100%;
+}
+
+.name {
+  text-align: center;
+}
+
+.inprogress {
+  text-align: center;
+}
+
+
+.incoming_and_done {
+  display: flex;
+}
+
+.incoming {
+  width: 50%;
+}
+
+.done{
+  width: 50%;
+}
