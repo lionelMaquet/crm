@@ -48,8 +48,9 @@ include "php/getprojects.php";
         </ul>
       </div>
 
-
+      <a href="php/addProject.php">
          <img src="assets/addButton.png" class="addProject"  alt="">
+      </a>
 
 
     </div>
@@ -60,7 +61,7 @@ include "php/getprojects.php";
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="main.js">
+  <script type="text/javascript" src="projet.js">
 
   </script>
   </body>

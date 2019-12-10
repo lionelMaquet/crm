@@ -151,6 +151,7 @@ button:focus{
 
 .addProject {
   position: absolute;
+  bottom: 0px;
 
 
 }

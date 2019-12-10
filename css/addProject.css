@@ -1,0 +1,40 @@
+
+.addProjectForm {
+
+
+  padding: 50px;
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.rowOne input {
+
+  height: 50px;
+  border:none;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.rowTwo input {
+  width: 100%;
+  border:none;
+  background-color: white;
+  border-radius: 50px;
+  height: 200px;
+}
+
+.rowThree input {
+  width: 100%;
+  border:none;
+  background-color: white;
+  border-radius: 50px;
+  height: 100px;
+
+}
+
+.addProjectTitle {
+  width: 70%;
+}
