@@ -1,4 +1,4 @@
-function getProjects(statut) {
+/*function getProjects(statut) {
 
        var xmlhttp = new XMLHttpRequest();
        xmlhttp.open("GET", "php/getprojects.php?q=" + statut, true);
@@ -12,7 +12,7 @@ function getProjects(statut) {
 
        xmlhttp.send();
 
-}
+}*/
 
 getProjects("avenir");
 
