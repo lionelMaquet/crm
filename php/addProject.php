@@ -42,14 +42,18 @@
         </div>
 
         <div class="row rowTwo">
-          <input type="text" name="briefing" placeholder="Briefing" class="addProjectBriefing">
+          <textarea  name="briefing" placeholder="Briefing" class="addProjectBriefing"></textarea>
         </div>
 
         <div class="row rowThree">
-          <input type="text" name="remarques" placeholder="remarques" value="" class="addProjectRemarques">
+          <textarea  name="remarques" placeholder="Remarques" value="" class="addProjectRemarques"></textarea>
         </div>
 
+        <button type="submit" name="button" class="submit">Valider</button>
+
       </form>
+
+
 
 
     </div>
