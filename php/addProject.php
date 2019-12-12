@@ -34,11 +34,11 @@
         <h1 class="blue">Nouveau projet</h1>
       </div>
 
-      <form  action="index.html" method="post" class="addProjectForm">
+      <form  action="dataToMySql.php" method="post" class="addProjectForm">
 
         <div class="row rowOne">
           <input type="text" name="projectTitle" placeholder="Titre du projet" class="addProjectTitle">
-          <input type="text" id="datepicker" class="addProjectDeadline" placeholder="Deadline" />
+          <input type="text" id="datepicker" name="projectDate" class="addProjectDeadline" placeholder="Deadline" />
         </div>
 
         <div class="row rowTwo">
@@ -49,7 +49,7 @@
           <textarea  name="remarques" placeholder="Remarques" value="" class="addProjectRemarques"></textarea>
         </div>
 
-        <button type="submit" name="button" class="submit">Valider</button>
+        <button type="submit" name="submit" class="submit" >Valider</button>
 
       </form>
 

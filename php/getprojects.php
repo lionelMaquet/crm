@@ -5,14 +5,14 @@
 function display($row) {
 
   echo "<a>";
-  echo "<li class='li_project'>";
-  echo "<div class='div_li_project'>";
+    echo "<li class='li_project'>";
+      echo "<div class='div_li_project'>";
 
-  echo "<h2>".$row["titre"]."</h2>";
-  echo "<p>".$row["deadline"]."</p>";
+        echo "<h2>".$row["titre"]."</h2>";
+        echo "<p>".date("d-m-Y", strtotime($row["deadline"]))."</p>";
 
-  echo "</div>";
-  echo "</li>";
+      echo "</div>";
+    echo "</li>";
   echo "</a>";
 
   echo "<br>";
