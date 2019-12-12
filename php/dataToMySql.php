@@ -1,7 +1,11 @@
 <?php
 
 $projectTitle = $_POST['projectTitle'];
-$projectDate = date("Y-d-m", strtotime($_POST['projectDate']));
+
+
+
+$projectDate = date("Y-m-d", strtotime($_POST['projectDate']));
+
 $briefing = $_POST['briefing'];
 $remarques = $_POST['remarques'];
 $userJ = $_POST['userJ'];
