@@ -32,9 +32,20 @@
 
       <div class="header">
         <h1 class="blue">Nouveau projet</h1>
+
+        <div class="users">
+          <button  id="selectUserGNewProject" >G</button>
+          <button  id="selectUserJNewProject" >J</button>
+          <button  id="selectUserLNewProject" >L</button>
+        </div>
+
       </div>
 
-      <form  action="dataToMySql.php" method="post" class="addProjectForm">
+      <form  action="dataToMySql.php" method="post" class="addProjectForm" id="addProjectForm">
+
+        <input type="hidden" name="userG" value="non" class="userGHidden" />
+        <input type="hidden" name="userJ" value="non" class="userJHidden" />
+        <input type="hidden" name="userL" value="non" class="userLHidden" />
 
         <div class="row rowOne">
           <input type="text" name="projectTitle" placeholder="Titre du projet" class="addProjectTitle">
