@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 05 déc. 2019 à 16:04
+-- Généré le :  jeu. 12 déc. 2019 à 19:02
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -74,17 +74,25 @@ CREATE TABLE IF NOT EXISTS `projet` (
   `statut` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `client_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`projet_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Déchargement des données de la table `projet`
 --
 
 INSERT INTO `projet` (`projet_id`, `titre`, `description`, `remarque`, `julien`, `gilles`, `lionel`, `deadline`, `statut`, `client_id`) VALUES
-(1, 'Site archéologique', 'Faire des panneaux pour machin', 'machin machin', 'oui', 'oui', 'non', '2019-12-19', 'avenir', NULL),
-(2, 'Design site web', 'Création de la maquette Neutral', 'Ne pas oublier … ', 'non', 'oui', 'non', '2020-01-08', 'encours', NULL),
-(3, 'Projet Biche', 'Intérieur appartement Biche', NULL, 'oui', 'oui', 'non', '2020-05-07', 'avenir', NULL),
-(4, 'Projet Helmo', 'Design Helmo', NULL, 'non', 'oui', 'non', '2019-11-06', 'termine', NULL);
+(75, 'vcb', 'cvb', 'cvbvc', 'non', 'oui', 'non', '2019-12-06', 'avenir', NULL),
+(74, 'test 3 fÃ©vrier', 'test 3 fÃ©vrier', 'test 3 fÃ©vrier', 'non', 'non', 'non', '2020-02-03', 'avenir', NULL),
+(73, 'test 1er janvier', 'test 1er janvier ', 'test 1er janvier ', 'non', 'non', 'non', '2020-01-01', 'avenir', NULL),
+(72, 'test 1er janvier ', 'test 1er janvier ', 'test 1er janvier ', 'non', 'non', 'non', '1970-01-01', 'avenir', NULL),
+(71, 'test 1er janvier', 'test 1er janvier', 'test 1er janvier', 'non', 'non', 'non', '1970-01-01', 'avenir', NULL),
+(70, 'sdf', 'dsf', 'dsfsdf', 'non', 'non', 'non', '2019-12-05', 'avenir', NULL),
+(69, 'sdf', 'dsf', 'dsfsdf', 'non', 'non', 'non', '2019-12-05', 'avenir', NULL),
+(68, 'sdf', 'dsf', 'dsfsdf', 'non', 'non', 'non', '2019-12-05', 'avenir', NULL),
+(67, 'sdf', 'dsf', 'dsfsdf', 'non', 'non', 'non', '2019-12-05', 'avenir', NULL),
+(66, 'ljh', 'kjkl', 'jkljkl', 'non', 'non', 'non', '2019-12-07', 'avenir', NULL),
+(65, ';:', ',;:', ';,:;,:', 'oui', 'non', 'oui', '2019-07-12', 'avenir', NULL),
+(64, 'Projet test 1', 'Projet test 1', 'Projet test 1', 'oui', 'oui', 'non', '2019-07-12', 'avenir', NULL);
 
 -- --------------------------------------------------------
 
