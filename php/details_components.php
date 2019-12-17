@@ -42,19 +42,25 @@ function getStatut(){
 
 function getUsers(){
 
-  global $julien, $gilles, $lionel;
+  global $julien, $gilles, $lionel, $id;
   $stringToReturn = "";
 
   if ($julien == 'oui') {
     $stringToReturn .= "<p>Julien</p>";
+  } else {
+    $stringToReturn .= "<p class='hidden hiddenColor' onclick='addUser(`julien`,".$id.")' >Julien</p>";
   }
 
   if ($gilles == 'oui') {
     $stringToReturn .= "<p>Gilles</p>";
+  } else {
+    $stringToReturn .= "<p class='hidden hiddenColor' onclick='addUser(`gilles`,".$id.")' >Gilles</p>";
   }
 
   if ($lionel == 'oui') {
     $stringToReturn .= "<p>Lionel</p>";
+  } else {
+    $stringToReturn .= "<p class='hidden hiddenColor' onclick='addUser(`lionel`,".$id.")' >Lionel</p>";
   }
 
   return $stringToReturn;

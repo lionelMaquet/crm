@@ -32,4 +32,18 @@
 
 .project_section .header .bottom img {
   width: 25px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: inline;
+}
+
+.hiddenColor {
+  color: blue;
+  cursor:pointer;
 }

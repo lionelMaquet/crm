@@ -46,18 +46,21 @@ require "details_components.php";
         </div>
         <div class="bottom">
           <?php echo getUsers(); ?>
-          <img src="../assets/addButton.png" alt="">
+          <img src="../assets/addButton.png" id="addUserButton" alt="" />
+          <img src="../assets/ok.png" id="validateAddUser" class="hidden" alt="">
 
         </div>
 
       </div>
 
 
+<!--
       <div class="users">
         <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects('avenir') ; resetStatutHighlight()" >G</button>
         <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects('avenir') ; resetStatutHighlight()">J</button>
         <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects('avenir') ; resetStatutHighlight()">L</button>
       </div>
+-->
 
 
     </div>
