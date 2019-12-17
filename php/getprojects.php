@@ -19,8 +19,23 @@ function display($row) {
 }
 
 function getProjects($statut) {
+
   require 'connection.php';
-  $sql = "SELECT * FROM projet WHERE statut = '".$statut."'";
+
+  $sql;
+
+  if ($_GET["user"] == "all") {
+
+    $sql = "SELECT * FROM projet WHERE statut = '".$statut."'";
+
+  }
+
+  else {
+    $sql = "SELECT * FROM projet WHERE statut = '".$statut."' AND ".$_GET["user"]." = 'oui' ";
+  }
+
+
+
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
