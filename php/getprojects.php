@@ -4,14 +4,14 @@
 
 function display($row) {
 
-  echo "<a>";
+  echo "<a href=php/details.php?id=".$row['projet_id'].">";
     echo "<li class='li_project'>";
-      echo "<div class='div_li_project'>";
+        echo "<div class='div_li_project'>";
 
-        echo "<h2>".$row["titre"]."</h2>";
-        echo "<p>".date("d-m-Y", strtotime($row["deadline"]))."</p>";
+          echo "<h2>".$row["titre"]."</h2>";
+          echo "<p>".date("d-m-Y", strtotime($row["deadline"]))."</p>";
 
-      echo "</div>";
+        echo "</div>";
     echo "</li>";
   echo "</a>";
 

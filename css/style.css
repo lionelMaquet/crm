@@ -124,11 +124,18 @@ body {
   width: 100%;
 }
 
+#ul_list_of_projects a {
+  text-decoration: none;
+  color: black;
+}
+
 .li_project {
   width: 100%;
   display:flex;
   justify-content: center;
 }
+
+
 
 .div_li_project {
   width: 70%;

@@ -1,0 +1,35 @@
+.project_section .header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.project_section .header .top {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.project_section .header .top h1 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-right: 30px;
+}
+
+.project_section .header .top p {
+  display : flex;
+  align-items: center;
+  color : #0AC693;
+}
+
+.project_section .header .bottom {
+  display: flex;
+}
+
+.project_section .header .bottom p {
+  margin-right: 30px;
+}
+
+.project_section .header .bottom img {
+  width: 25px;
+}
