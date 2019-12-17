@@ -21,7 +21,7 @@ include "php/getprojects.php";
       <h1 id="neutral_logo" class="white">neutral</h1>
 
       <ul class="nav_ul list_style_none white">
-        <li>Projet</li>
+        <li><a href="projet.php">Projet</a></li>
         <li>New idée</li>
         <li>Agenda</li>
         <li>Contact</li>
@@ -32,7 +32,7 @@ include "php/getprojects.php";
     <div class="project_section">
 
       <div class="header">
-        <h1 class="blue">PROJETS</h1>
+        <h1 class="blue" id="title">Projets</h1>
       </div>
 
       <div class="statuts">

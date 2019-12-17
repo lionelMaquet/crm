@@ -183,3 +183,8 @@ button:focus{
   border-radius: 50px;
 
 }
+
+.nav_ul a {
+  color: white;
+  text-decoration: none;
+}

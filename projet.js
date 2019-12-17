@@ -2,6 +2,16 @@ let currentUser = "all";
 
 function setUser(user) {
   currentUser = user;
+
+  if (currentUser == "all") {
+
+    $('#title').html("Projets")
+  }
+
+  else {
+    $('#title').html(currentUser.charAt(0).toUpperCase() + currentUser.substring(1))
+  }
+
 }
 
 
