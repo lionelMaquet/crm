@@ -59,7 +59,6 @@
         <div class="row rowThree">
           <textarea  name="remarques" placeholder="Remarques" value="" class="addProjectRemarques"></textarea>
         </div>
-
         <button type="submit" name="submit" class="submit" >Valider</button>
 
       </form>

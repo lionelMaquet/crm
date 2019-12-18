@@ -42,7 +42,7 @@ require "details_components.php";
       <div class="header">
         <div class="top">
           <h1 class="blue" id="title"><?php echo $titre ?></h1>
-          <p><?php echo getStatut(); ?></p>
+          <p class="projectStatut"><?php echo getStatut(); ?></p>
         </div>
         <div class="bottom">
           <?php echo getUsers(); ?>
@@ -78,7 +78,7 @@ require "details_components.php";
         </div>
 
         <div class="buttondiv">
-          <button type="button" name="button" class="statut_button" onclick="<?php echo "changeStatut(".$_GET['id'].")" ?>">START</button>
+          <button value="<?php echo $statut ?>" type="button" name="button" class="statut_button" onclick="<?php echo "changeStatut(".$_GET['id'].")" ?>">START</button>
         </div>
 
 
