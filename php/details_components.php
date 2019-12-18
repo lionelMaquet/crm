@@ -1,15 +1,11 @@
 <?php
 
-include "connection.php";
+require "connection.php";
 
 $id = $_SESSION['details_id'];
-
 $sql = "SELECT * FROM projet WHERE projet_id = '".$id."'";
 $data = $conn->query($sql);
 $projectResult = $data->fetch_assoc();
-
-
-
 
 $titre = $projectResult['titre'];
 $description = $projectResult['description'];
@@ -21,10 +17,8 @@ $deadline = $projectResult['deadline'];
 $statut = $projectResult['statut'];
 $clientid = $projectResult['client_id'];
 
-
 function getStatut(){
   global $statut;
-
 
   if ($statut == 'avenir') {
     return 'A venir';
@@ -64,7 +58,6 @@ function getUsers(){
   }
 
   return $stringToReturn;
-
 
 }
 

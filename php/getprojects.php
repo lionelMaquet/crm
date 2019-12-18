@@ -1,7 +1,5 @@
 <?php
 
-
-
 function display($row) {
 
   echo "<a href=php/details.php?id=".$row['projet_id'].">";
@@ -34,8 +32,6 @@ function getProjects($statut) {
     $sql = "SELECT * FROM projet WHERE statut = '".$statut."' AND ".$_GET["user"]." = 'oui' ";
   }
 
-
-
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
@@ -49,9 +45,6 @@ function getProjects($statut) {
 if ((isset($_GET['q']) && ($_GET != null))){
   getProjects($_GET['q']);
 }
-
-
-
 
 
  ?>

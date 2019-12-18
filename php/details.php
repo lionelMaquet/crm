@@ -3,12 +3,7 @@
 $_SESSION["details_id"] = $_GET['id'];
 require "details_components.php";
 
-
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -21,89 +16,87 @@ require "details_components.php";
   </head>
 
   <body>
+    <div class="wrapper">
+      <div class="side_section bg_blue">
+
+        <h1 id="neutral_logo" class="white">neutral</h1>
+
+        <ul class="nav_ul list_style_none white">
+          <li><a href="../projet.php">Projet</a></li>
+          <li>New idée</li>
+          <li>Agenda</li>
+          <li>Contact</li>
+        </ul>
+
+      </div>
+
+      <div class="project_section">
+
+        <div class="header">
+          <div class="top">
+            <h1 class="blue" id="title"><?php echo $titre ?></h1>
+            <p class="projectStatut"><?php echo getStatut(); ?></p>
+          </div>
+          <div class="bottom">
+            <?php echo getUsers(); ?>
+            <img src="../assets/addButton.png" id="addUserButton" alt="" />
+            <img src="../assets/ok.png" id="validateAddUser" class="hidden" alt="">
+
+          </div>
+
+        </div>
+
+        <div class="main">
+          <div class="left">
+            <div class="briefing">
+              <h2>Briefing</h2>
+              <p> <?php echo $description; ?></p>
+
+            </div>
+            <div class="remarques">
+              <h2>Remarques</h2>
+              <p><?php echo $remarque; ?></p>
+
+            </div>
+          </div>
+          <div class="right">
+            <div class="taches">
+              <h2>Tâches de <em> USER </em> </h2>
+              <ul>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="buttondiv">
+            <button value="<?php echo $statut ?>" type="button" name="button" class="statut_button" onclick="<?php echo "changeStatut(".$_GET['id'].")" ?>">START</button>
+          </div>
 
 
-  <div class="wrapper">
-    <div class="side_section bg_blue">
+        </div>
 
-      <h1 id="neutral_logo" class="white">neutral</h1>
 
-      <ul class="nav_ul list_style_none white">
-        <li><a href="../projet.php">Projet</a></li>
-        <li>New idée</li>
-        <li>Agenda</li>
-        <li>Contact</li>
-      </ul>
+  <!-- A FAIRE POUR AJOUTER UN LIEN VERS LES PROJETS D'UN UTILISATEUR DEPUIS LA PAGE DE DETAILS
+        <div class="users">
+          <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects('avenir') ; resetStatutHighlight()" >G</button>
+          <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects('avenir') ; resetStatutHighlight()">J</button>
+          <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects('avenir') ; resetStatutHighlight()">L</button>
+        </div>
+  -->
+
+
+      </div>
 
     </div>
 
-    <div class="project_section">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/details.js">
 
-      <div class="header">
-        <div class="top">
-          <h1 class="blue" id="title"><?php echo $titre ?></h1>
-          <p class="projectStatut"><?php echo getStatut(); ?></p>
-        </div>
-        <div class="bottom">
-          <?php echo getUsers(); ?>
-          <img src="../assets/addButton.png" id="addUserButton" alt="" />
-          <img src="../assets/ok.png" id="validateAddUser" class="hidden" alt="">
-
-        </div>
-
-      </div>
-
-      <div class="main">
-        <div class="left">
-          <div class="briefing">
-            <h2>Briefing</h2>
-            <p> <?php echo $description; ?></p>
-
-          </div>
-          <div class="remarques">
-            <h2>Remarques</h2>
-            <p><?php echo $remarque; ?></p>
-
-          </div>
-        </div>
-        <div class="right">
-          <div class="taches">
-            <h2>Tâches de <em> USER </em> </h2>
-            <ul>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-        <div class="buttondiv">
-          <button value="<?php echo $statut ?>" type="button" name="button" class="statut_button" onclick="<?php echo "changeStatut(".$_GET['id'].")" ?>">START</button>
-        </div>
-
-
-      </div>
-
-
-<!--
-      <div class="users">
-        <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects('avenir') ; resetStatutHighlight()" >G</button>
-        <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects('avenir') ; resetStatutHighlight()">J</button>
-        <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects('avenir') ; resetStatutHighlight()">L</button>
-      </div>
--->
-
-
-    </div>
-
-  </div>
-
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="../js/details.js">
-
-  </script>
+    </script>
   </body>
 </html>

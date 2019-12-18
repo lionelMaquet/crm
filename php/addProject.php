@@ -14,67 +14,59 @@
   </head>
   <body>
 
-  <div class="wrapper">
-    <div class="side_section bg_blue">
+    <div class="wrapper">
+      <div class="side_section bg_blue">
 
-      <h1 id="neutral_logo" class="white">neutral</h1>
+        <h1 id="neutral_logo" class="white">neutral</h1>
 
-      <ul class="nav_ul list_style_none white">
-        <li>Projet</li>
-        <li>New idée</li>
-        <li>Agenda</li>
-        <li>Contact</li>
-      </ul>
-
-    </div>
-
-    <div class="project_section">
-
-      <div class="header">
-        <h1 class="blue">Nouveau projet</h1>
-
-        <div class="users">
-          <button  id="selectUserGNewProject" >G</button>
-          <button  id="selectUserJNewProject" >J</button>
-          <button  id="selectUserLNewProject" >L</button>
-        </div>
+        <ul class="nav_ul list_style_none white">
+          <li>Projet</li>
+          <li>New idée</li>
+          <li>Agenda</li>
+          <li>Contact</li>
+        </ul>
 
       </div>
 
-      <form  action="dataToMySql.php" method="post" class="addProjectForm" id="addProjectForm">
+      <div class="project_section">
 
-        <input type="hidden" name="userG" value="non" class="userGHidden" />
-        <input type="hidden" name="userJ" value="non" class="userJHidden" />
-        <input type="hidden" name="userL" value="non" class="userLHidden" />
+        <div class="header">
+          <h1 class="blue">Nouveau projet</h1>
 
-        <div class="row rowOne">
-          <input type="text" name="projectTitle" placeholder="Titre du projet" class="addProjectTitle">
-          <input type="text" id="datepicker" name="projectDate" class="addProjectDeadline" placeholder="Deadline" />
+          <div class="users">
+            <button  id="selectUserGNewProject" >G</button>
+            <button  id="selectUserJNewProject" >J</button>
+            <button  id="selectUserLNewProject" >L</button>
+          </div>
+
         </div>
 
-        <div class="row rowTwo">
-          <textarea  name="briefing" placeholder="Briefing" class="addProjectBriefing"></textarea>
-        </div>
+        <form  action="dataToMySql.php" method="post" class="addProjectForm" id="addProjectForm">
 
-        <div class="row rowThree">
-          <textarea  name="remarques" placeholder="Remarques" value="" class="addProjectRemarques"></textarea>
-        </div>
-        <button type="submit" name="submit" class="submit" >Valider</button>
+          <input type="hidden" name="userG" value="non" class="userGHidden" />
+          <input type="hidden" name="userJ" value="non" class="userJHidden" />
+          <input type="hidden" name="userL" value="non" class="userLHidden" />
 
-      </form>
+          <div class="row rowOne">
+            <input type="text" name="projectTitle" placeholder="Titre du projet" class="addProjectTitle">
+            <input type="text" id="datepicker" name="projectDate" class="addProjectDeadline" placeholder="Deadline" />
+          </div>
 
+          <div class="row rowTwo">
+            <textarea  name="briefing" placeholder="Briefing" class="addProjectBriefing"></textarea>
+          </div>
 
+          <div class="row rowThree">
+            <textarea  name="remarques" placeholder="Remarques" value="" class="addProjectRemarques"></textarea>
+          </div>
+          <button type="submit" name="submit" class="submit" >Valider</button>
 
+        </form>
+
+      </div>
 
     </div>
 
-  </div>
-
-
-
-
-
-
-  <script src="../js/addProject.js" charset="utf-8"></script>
+    <script src="../js/addProject.js" charset="utf-8"></script>
   </body>
 </html>

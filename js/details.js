@@ -46,26 +46,20 @@ updateStatutButton()
 updateStatutTitle()
 
 
-
-
 function changeStatut(projectID) {
-// EN COURS
 
-let statut = $('.statut_button').val();
+  let statut = $('.statut_button').val();
 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "updatestatut.php?id=" + projectID + "&statut=" + statut, true);
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText)
-        let newStatut = this.responseText;
-        $('.statut_button').val(newStatut)
-        updateStatutButton()
-        updateStatutTitle()
-    }
-};
-xmlhttp.send();
-
-
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "updatestatut.php?id=" + projectID + "&statut=" + statut, true);
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          let newStatut = this.responseText;
+          $('.statut_button').val(newStatut)
+          updateStatutButton()
+          updateStatutTitle()
+      }
+  };
+  xmlhttp.send();
 
 }
