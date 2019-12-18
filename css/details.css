@@ -47,3 +47,51 @@
   color: blue;
   cursor:pointer;
 }
+
+/**main**/
+
+.main {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .left {
+  width: 40vw;
+}
+
+.main .right {
+  width: 40vw;
+}
+
+.main .left .briefing {
+  margin-bottom: 20px;
+}
+
+.main .left .briefing, .main .left .remarques, .main .right .taches {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+  height: 300px;
+  background-color: white;
+  overflow: scroll;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  padding-right: 20px;
+
+}
+
+.main .left h2, .main .right h2 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  color: #0D4E5E
+}
+
+.main .left p {
+  position: relative;
+  top: 30px;
+  left: 20px;
+}

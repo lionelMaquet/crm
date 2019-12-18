@@ -53,6 +53,32 @@ require "details_components.php";
 
       </div>
 
+      <div class="main">
+        <div class="left">
+          <div class="briefing">
+            <h2>Briefing</h2>
+            <p> <?php echo $description; ?></p>
+
+          </div>
+          <div class="remarques">
+            <h2>Remarques</h2>
+            <p><?php echo $remarque; ?></p>
+
+          </div>
+        </div>
+        <div class="right">
+          <div class="taches">
+            <h2>Tâches de <em> USER </em> </h2>
+            <ul>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
 <!--
       <div class="users">
