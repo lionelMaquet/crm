@@ -19,3 +19,15 @@ $('#validateAddUser').on('click', () => {
   $('#addUserButton').removeClass('hidden')
 
 })
+
+
+
+
+
+function changeStatut(projectID) {
+
+
+// EN COURS
+
+
+}

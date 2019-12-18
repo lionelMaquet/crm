@@ -95,3 +95,19 @@
   top: 30px;
   left: 20px;
 }
+
+.buttondiv {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+}
+
+.buttondiv button {
+  width: 200px;
+  background-color: green;
+  min-height: 50px;
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  left: -50%;
+}

@@ -77,6 +77,11 @@ require "details_components.php";
 
         </div>
 
+        <div class="buttondiv">
+          <button type="button" name="button" class="statut_button" onclick="<?php echo "changeStatut(".$_GET['id'].")" ?>">START</button>
+        </div>
+
+
       </div>
 
 
