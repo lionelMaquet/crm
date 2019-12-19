@@ -71,6 +71,7 @@
 }
 
 .main .left .briefing, .main .left .remarques, .main .right .taches {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   border-radius: 20px;
@@ -90,10 +91,20 @@
   color: #0D4E5E
 }
 
-.main .left p {
+.main .left p, .main .left textarea {
   position: relative;
   top: 30px;
   left: 20px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.main .left textarea {
+  border:none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
 }
 
 .buttondiv {
@@ -110,4 +121,21 @@
   color: white;
   position: relative;
   left: -50%;
+}
+
+
+
+.changeBriefingOuRemarqueButton{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+}
+
+.changeStateButtonHidden {
+  display:none;
+}
+
+.textzoneHidden {
+  display:none;
 }

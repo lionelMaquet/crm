@@ -66,3 +66,101 @@ function changeStatut(projectID) {
   xmlhttp.send();
 
 }
+
+
+
+
+
+/*MODIFICATION DU BRIEFING ET DES REMARQUES*/
+
+function allowBriefingAndRemarksChange() {
+
+
+
+
+ // cacher les p
+
+$('.briefingOuRemarqueP').addClass('textzoneHidden')
+
+ // Montrer les textarea
+
+$('.briefingOuRemarqueTextarea').removeClass('textzoneHidden')
+
+
+// donner la meme hauteur que le div à la textarea
+
+let heightOfBriefingP = $('.briefingP').height()
+
+if (heightOfBriefingP > 100) { // empêche la textarea de valoir 0 de haut lorsque le p est vide
+  $('.briefingTextarea').css("height", heightOfBriefingP+"px")
+}
+
+
+let heightOfRemarqueP = $('.remarqueP').height()
+if (heightOfRemarqueP > 100) {
+  $('.remarqueTextarea').css("height", heightOfRemarqueP+"px")
+
+}
+
+ // Insérer le texte de p dans textarea
+
+$('.briefingTextarea').html($('.briefingP').html())
+$('.remarqueTextarea').html($('.remarqueP').html())
+
+
+ // cacher bouton +
+
+ $('.modifyButton').addClass('changeStateButtonHidden')
+
+ // montrer bouton OK
+
+ $('.commitButton').removeClass('changeStateButtonHidden')
+
+}
+
+function updatebriefingandrem(projectID, briefing, remarques){
+
+
+
+}
+
+function commitBriefingAndRemarksChange(id) {
+
+  // 1 : cacher les textarea
+
+  $('.briefingOuRemarqueTextarea').addClass('textzoneHidden')
+
+  // 2 : montrer les p
+
+  $('.briefingOuRemarqueP').removeClass('textzoneHidden')
+
+
+  // 3 : insérer le texte des textarea dans les p
+
+  $('.briefingP').html($('.briefingTextarea').val())
+  $('.remarqueP').html($('.remarqueTextarea').val())
+
+  // 4 : cacher bouton OK
+
+  $('.modifyButton').removeClass('changeStateButtonHidden')
+
+  // 5 : montrer bouton +
+
+  $('.commitButton').addClass('changeStateButtonHidden')
+
+  // 6 : appeler la page updatebriefandrem.php pour changer les valeurs dans la db
+
+
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "updatebriefandrem.php?id=" + id + "&briefing=" + $('.briefingTextarea').val() + "&remarque=" + $('.remarqueTextarea').val() , true);
+  console.log("updatebriefandrem.php?id=" + id + "&briefing=" + $('.briefingTextarea').val() + "&remarque=" + $('.remarqueTextarea').val())
+  xmlhttp.send();
+  $(event.target).removeClass('hiddenColor')
+
+
+
+
+
+
+}

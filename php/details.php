@@ -50,12 +50,20 @@ require "details_components.php";
           <div class="left">
             <div class="briefing">
               <h2>Briefing</h2>
-              <p> <?php echo $description; ?></p>
+              <p class="briefingOuRemarqueP briefingP"> <?php echo $description; ?></p>
+              <textarea name="name"  rows="8" cols="80" class="briefingOuRemarqueTextarea briefingTextarea textzoneHidden">test 1er janvier</textarea>
+
+              <img src="../assets/addButton.png" class="changeBriefingOuRemarqueButton modifyButton" onclick="allowBriefingAndRemarksChange()" alt="">
+              <img src="../assets/ok.png" class="changeBriefingOuRemarqueButton changeStateButtonHidden commitButton" onclick="<?php echo "commitBriefingAndRemarksChange(".$_GET['id'].")" ?>" alt="">
 
             </div>
             <div class="remarques">
               <h2>Remarques</h2>
-              <p><?php echo $remarque; ?></p>
+              <p class="briefingOuRemarqueP remarqueP"><?php echo $remarque; ?></p>
+              <textarea name="name"  rows="8" cols="80" class="briefingOuRemarqueTextarea remarqueTextarea textzoneHidden" >test 1er janvier</textarea>
+
+              <img src="../assets/addButton.png" class="changeBriefingOuRemarqueButton modifyButton" onclick="allowBriefingAndRemarksChange()" alt="">
+              <img src="../assets/ok.png" class="changeBriefingOuRemarqueButton changeStateButtonHidden commitButton" onclick="<?php echo "commitBriefingAndRemarksChange(".$_GET['id'].")" ?>"  alt="">
 
             </div>
           </div>
