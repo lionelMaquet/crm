@@ -136,14 +136,17 @@ body {
   justify-content: center;
 }
 
-
-
 .div_li_project {
   width: 70%;
   display:flex;
   justify-content: space-between;
   background-color: white;
   padding: 10px 30px;
+  transition: background-color 0.13s;
+}
+
+.div_li_project:hover {
+  background-color:#D8E5E8
 }
 
 button {
