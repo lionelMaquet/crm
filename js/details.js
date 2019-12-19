@@ -21,12 +21,15 @@ $('#validateAddUser').on('click', () => {
 })
 
 function updateStatutButton() {
-  if ($('.statut_button').val() == "avenir" || $('.statut_button').val() == "termine") {
+  if ($('.statut_button').val() == "avenir") {
     $('.statut_button').html("START")
     $('.statut_button').css("background-color", "green")
   } else if ($('.statut_button').val() == "encours") {
     $('.statut_button').html("END")
     $('.statut_button').css("background-color", "red")
+  } else if ($('.statut_button').val() == "termine") {
+    $('.statut_button').html("Réouvrir")
+    $('.statut_button').css("background-color", "GREY")
   }
 }
 
