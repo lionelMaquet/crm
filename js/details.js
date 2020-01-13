@@ -185,12 +185,16 @@ function replaceTasksWith(list){
 
 $(document).on('click',".username", function(){
 
-
-
   let user = event.target.id
   let id = projectID
   console.log(user)
   console.log("hi")
+
+  console.log(event.target)
+
+  $('.username').removeClass('red');
+
+  $(event.target).addClass('red')
 
   $('#nameOfCurrentUserForTasks').html(user)
 

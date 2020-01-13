@@ -73,7 +73,7 @@ require "gettasks.php";
           </div>
           <div class="right">
             <div class="taches">
-              <h2>Tâches de <em id="nameOfCurrentUserForTasks"> USER </em> </h2>
+              <h2>Tâches de <em id="nameOfCurrentUserForTasks"> tous </em> </h2>
               <ul id="listeTaches">
                 <?php echo getTasks('all', $_GET['id']); ?>
               </ul>
