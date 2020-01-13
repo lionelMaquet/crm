@@ -5,6 +5,10 @@ require "details_components.php";
 require "gettasks.php";
 ?>
 
+<script type="text/javascript">
+  let projectID = <?php echo $_GET['id'] ?>
+</script>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -69,8 +73,8 @@ require "gettasks.php";
           </div>
           <div class="right">
             <div class="taches">
-              <h2>Tâches de <em> USER </em> </h2>
-              <ul>
+              <h2>Tâches de <em id="nameOfCurrentUserForTasks"> USER </em> </h2>
+              <ul id="listeTaches">
                 <?php echo getTasks('all', $_GET['id']); ?>
               </ul>
 
@@ -103,8 +107,10 @@ require "gettasks.php";
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../js/details.js">
+    <script type="text/javascript" src="../js/details.js"></script>
 
-    </script>
+
+
+
   </body>
 </html>

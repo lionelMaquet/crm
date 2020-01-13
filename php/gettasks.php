@@ -4,7 +4,14 @@ function displayTask($task){
 
   echo '<br>';
 
-  echo $task['description'];
+  echo "<div>";
+
+    echo $task['description'];
+    // rajouter le bouton pour supprimer ! 
+
+  echo "</div>";
+
+
 
 }
 

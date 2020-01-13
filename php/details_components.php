@@ -40,21 +40,21 @@ function getUsers(){
   $stringToReturn = "";
 
   if ($julien == 'oui') {
-    $stringToReturn .= "<p>Julien</p>";
+    $stringToReturn .= "<p id='julien' class='username'>Julien</p>";
   } else {
-    $stringToReturn .= "<p class='hidden hiddenColor' onclick='addUser(`julien`,".$id.")' >Julien</p>";
+    $stringToReturn .= "<p id='julien' class='username hidden hiddenColor' onclick='addUser(`julien`,".$id.")'>Julien</p>";
   }
 
   if ($gilles == 'oui') {
-    $stringToReturn .= "<p>Gilles</p>";
+    $stringToReturn .= "<p id='gilles' class='username'>Gilles</p>";
   } else {
-    $stringToReturn .= "<p class='hidden hiddenColor' onclick='addUser(`gilles`,".$id.")' >Gilles</p>";
+    $stringToReturn .= "<p id='gilles' class='username hidden hiddenColor' onclick='addUser(`gilles`,".$id.")' >Gilles</p>";
   }
 
   if ($lionel == 'oui') {
-    $stringToReturn .= "<p>Lionel</p>";
+    $stringToReturn .= "<p id='lionel' class='username'>Lionel</p>";
   } else {
-    $stringToReturn .= "<p class='hidden hiddenColor' onclick='addUser(`lionel`,".$id.")' >Lionel</p>";
+    $stringToReturn .= "<p id='lionel' class='username hidden hiddenColor' onclick='addUser(`lionel`,".$id.")' >Lionel</p>";
   }
 
   return $stringToReturn;
