@@ -2,7 +2,7 @@
 
 $_SESSION["details_id"] = $_GET['id'];
 require "details_components.php";
-
+require "gettasks.php";
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +71,7 @@ require "details_components.php";
             <div class="taches">
               <h2>Tâches de <em> USER </em> </h2>
               <ul>
-
+                <?php echo getTasks('all', $_GET['id']); ?>
               </ul>
 
             </div>
