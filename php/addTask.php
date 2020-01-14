@@ -1,5 +1,8 @@
 <?php
 
+// A FAIRE : remplacer par de l'ajax ! 
+
+
 // PAGE WHEN ADDING A TASKS
 
 $taskDescription = $_POST['description'];

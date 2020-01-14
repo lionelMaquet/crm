@@ -1,11 +1,30 @@
 // GET TASKS
 
+let usernameOfSelectedUser;
 
-function refreshListOfTasks(username){
+// le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
+if (!$($('.username').get(0)).hasClass('hiddenColor')){
+  selectUserForTask($('.username')[0])
+  usernameOfSelectedUser = $('.username')[0].id
+}
+
+else if (!$($('.username').get(1)).hasClass('hiddenColor')){
+  selectUserForTask($('.username')[1])
+  usernameOfSelectedUser = $('.username')[1].id
+}
+
+else if (!$($('.username').get(2)).hasClass('hiddenColor')){
+    selectUserForTask($('.username')[2])
+    usernameOfSelectedUser = $('.username')[2].id
+  }
+
+
+
+function refreshListOfTasks(){
 
   var xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.open("GET", "gettasks.php?user="+username+"&projet_id="+projectID, true);
+  xmlhttp.open("GET", "gettasks.php?user="+usernameOfSelectedUser+"&projet_id="+projectID, true);
 
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -25,7 +44,8 @@ function selectUserForTask(target){ // target is the p
   $(target).addClass('selectedForTasks');
   $('.hiddenValueCurrentUser').val(target.id) // pour l'ajout de taches, savoir à qui l'ajouter
   $('#nameOfCurrentUserForTasks').html(target.id)
-  refreshListOfTasks(target.id)
+  usernameOfSelectedUser = target.id
+  refreshListOfTasks()
 
 }
 
@@ -38,13 +58,31 @@ $(document).on('click',".username", function(){
 
 
 
-// le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
-if (!$($('.username').get(0)).hasClass('hiddenColor')){
-  selectUserForTask($('.username')[0])
-}
 
-else if (!$($('.username').get(1)).hasClass('hiddenColor')){
-  selectUserForTask($('.username')[1])}
 
-else if (!$($('.username').get(2)).hasClass('hiddenColor')){
-    selectUserForTask($('.username')[2])}
+
+
+
+// DELETE TASK
+
+$(document).on('click', ".deleteTaskButton", function() {
+
+  let taskId = $(event.target).val()
+  console.log(taskId)
+
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET", "deleteTask.php?taskid="+taskId, true);
+
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          refreshListOfTasks();
+
+      }
+  };
+  xmlhttp.send();
+
+
+
+
+})

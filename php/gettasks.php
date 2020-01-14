@@ -7,11 +7,10 @@ function displayTask($task){
   echo "<div>";
 
     echo $task['description'];
-    // rajouter le bouton pour supprimer ! 
+    echo "<button class='deleteTaskButton' value='".$task['tache_id']."'>X</button>";
+    // rajouter le bouton pour supprimer !
 
   echo "</div>";
-
-
 
 }
 
@@ -37,8 +36,6 @@ function getTasks($user, $projet_id) {
 
 
     }
-
-
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
