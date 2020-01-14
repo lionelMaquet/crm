@@ -77,12 +77,19 @@ require "gettasks.php";
               <ul id="listeTaches">
                 <?php echo getTasks('all', $_GET['id']); ?>
               </ul>
+              <!--
               <form class="formAjoutDeTache" action="addTask.php" method="post">
                 <input type="hidden" name="projetId" value="<?php echo $_GET['id']; ?>"class-"hiddenValueProjectId" />
                 <input type="hidden" name="currentUserForTasks" value="all" class="hiddenValueCurrentUser" />
                 <textarea name="description" rows="2" cols="100"></textarea>
                 <button type="submit" name="button">OK</button>
               </form>
+            -->
+              <div class="">
+                <textarea class="textareaAddTask" name="name" rows="8" cols="80"></textarea>
+                <button type="button" name="button" class="addTaskButton">ADD</button>
+
+              </div>
 
             </div>
 

@@ -90,4 +90,28 @@ $(document).on('click', ".deleteTaskButton", function() {
 
 
 
-// ADD TASK 
+// ADD TASK
+
+
+$(document).on('click', ".addTaskButton", function() {
+
+  let username = usernameOfSelectedUser
+  let description = $('.textareaAddTask').val()
+
+
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET", "addTask.php?projectID="+projectID+"&username="+username+"&description="+description, true);
+  console.log("addTask.php?projectID="+projectID+"&username="+username+"&description="+description)
+
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          refreshListOfTasks();
+          $('.textareaAddTask').val('')
+      }
+
+  };
+  xmlhttp.send();
+
+
+})
