@@ -1,5 +1,8 @@
 <?php
 
+// Accès en AJAX
+
+
 $taskDescription = $_GET['description'];
 $user = $_GET['username'];
 $projet_id = $_GET['projectID'];

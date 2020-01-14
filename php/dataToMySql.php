@@ -12,9 +12,6 @@ $userJ = $_POST['userJ'];
 $userG = $_POST['userG'];
 $userL = $_POST['userL'];
 
-
-/* AJOUTER UNE ERREUR SI MANQUE D'INFOS */
-
 function addProjects($projectTitle, $projectDate, $briefing, $remarques, $userJ, $userG, $userL ) {
   require 'connection.php';
 

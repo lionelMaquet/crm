@@ -3,12 +3,10 @@
 function displayTask($task){
 
   echo '<br>';
-
   echo "<div>";
 
     echo $task['description'];
     echo "<button class='deleteTaskButton' value='".$task['tache_id']."'>X</button>";
-    // rajouter le bouton pour supprimer !
 
   echo "</div>";
 

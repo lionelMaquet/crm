@@ -155,7 +155,6 @@ function commitBriefingAndRemarksChange(id) {
 
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", "updatebriefandrem.php?id=" + id + "&briefing=" + $('.briefingTextarea').val() + "&remarque=" + $('.remarqueTextarea').val() , true);
-  console.log("updatebriefandrem.php?id=" + id + "&briefing=" + $('.briefingTextarea').val() + "&remarque=" + $('.remarqueTextarea').val())
   xmlhttp.send();
   $(event.target).removeClass('hiddenColor')
 
