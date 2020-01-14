@@ -3,9 +3,10 @@
 function displayTask($task){
 
   echo '<br>';
-  echo "<div>";
-
-    echo $task['description'];
+  echo "<div class='taskDiv'>";
+    echo "<p>";
+      echo $task['description'];
+    echo "</p>";
     echo "<button class='deleteTaskButton' value='".$task['tache_id']."'>X</button>";
 
   echo "</div>";

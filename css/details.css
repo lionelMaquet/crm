@@ -75,14 +75,20 @@
   box-sizing: border-box;
   width: 100%;
   border-radius: 20px;
-  height: 300px;
+  max-height: 600px;
   background-color: white;
-  overflow: scroll;
-  overflow-x: hidden;
+
   word-wrap: break-word;
   padding-right: 20px;
 
 }
+.main .left .briefing, .main .left .remarques, .main .right .taches{
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+
+
 
 .main .left h2, .main .right h2 {
   position: relative;
@@ -148,7 +154,29 @@
 }
 
 
-.formAjoutDeTache{
-  position: absolute;
-  bottom: 0px;
+.addTaskDiv{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 10px;
+}
+
+.textareaAddTask{
+  width: 90%;
+  height: 50px;
+  resize: none;
+}
+
+#listeTaches{
+  padding-bottom: 20px;
+}
+
+.taskDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskDiv p {
+  word-break: break-all;
 }

@@ -74,15 +74,14 @@ require "gettasks.php";
           <div class="right">
             <div class="taches">
               <h2>Tâches de <em id="nameOfCurrentUserForTasks"> tous </em> </h2>
+              <br>
               <ul id="listeTaches">
                 <?php echo getTasks('all', $_GET['id']); ?>
               </ul>
-
-              <div class="">
-                <textarea class="textareaAddTask" name="name" rows="8" cols="80"></textarea>
-                <button type="button" name="button" class="addTaskButton">ADD</button>
-              </div>
-
+            </div>
+            <div class="addTaskDiv">
+              <textarea class="textareaAddTask" name="name" ></textarea>
+              <button type="button" name="button" class="addTaskButton">ADD</button>
             </div>
 
           </div>
