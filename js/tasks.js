@@ -1,4 +1,5 @@
-// GET TASKS
+
+// SELECTION D'UN UTILISATEUR
 
 let usernameOfSelectedUser;
 
@@ -20,24 +21,6 @@ else if (!$($('.username').get(2)).hasClass('hiddenColor')){
 
 
 
-function refreshListOfTasks(){
-
-  var xmlhttp = new XMLHttpRequest();
-
-  xmlhttp.open("GET", "gettasks.php?user="+usernameOfSelectedUser+"&projet_id="+projectID, true);
-
-  xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          let listeTache = this.responseText;
-          $('#listeTaches').html(listeTache);
-
-      }
-  };
-
-  xmlhttp.send();
-
-}
-
 function selectUserForTask(target){ // target is the p
 
   $('.username').removeClass('selectedForTasks');
@@ -57,6 +40,26 @@ $(document).on('click',".username", function(){
 
 
 
+
+// RAFRAICHISSEMENT DES LISTES
+
+function refreshListOfTasks(){
+
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET", "gettasks.php?user="+usernameOfSelectedUser+"&projet_id="+projectID, true);
+
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          let listeTache = this.responseText;
+          $('#listeTaches').html(listeTache);
+
+      }
+  };
+
+  xmlhttp.send();
+
+}
 
 
 
@@ -83,6 +86,8 @@ $(document).on('click', ".deleteTaskButton", function() {
   xmlhttp.send();
 
 
-
-
 })
+
+
+
+// ADD TASK 
