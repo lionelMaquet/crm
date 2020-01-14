@@ -123,8 +123,6 @@
   left: -50%;
 }
 
-
-
 .changeBriefingOuRemarqueButton{
   position: absolute;
   bottom: 0px;
@@ -138,4 +136,19 @@
 
 .textzoneHidden {
   display:none;
+}
+
+.username {
+  cursor: pointer;
+}
+
+.selectedForTasks{
+  color: #68ebff;
+  font-style: italic;
+}
+
+
+.formAjoutDeTache{
+  position: absolute;
+  bottom: 0px;
 }

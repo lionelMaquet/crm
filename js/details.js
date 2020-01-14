@@ -1,4 +1,3 @@
-console.log('wow')
 
 function addUser(user, projectID) {
 
@@ -162,55 +161,3 @@ function commitBriefingAndRemarksChange(id) {
 
 
 }
-
-
-function getUserTasksJulien(id){
-  xmlhttp.open("GET", "gettasks.php&user=julien&projet_id="+id, true);
-  xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          let newStatut = this.responseText;
-          console.log(newStatut)
-
-      }
-  };
-  xmlhttp.send();
-
-}
-
-function replaceTasksWith(list){
-
-  $('#listeTaches').html(list);
-
-}
-
-$(document).on('click',".username", function(){
-
-  let user = event.target.id
-  let id = projectID
-  console.log(user)
-  console.log("hi")
-
-  console.log(event.target)
-
-  $('.username').removeClass('red');
-
-  $(event.target).addClass('red')
-
-  $('#nameOfCurrentUserForTasks').html(user)
-
-  var xmlhttp = new XMLHttpRequest();
-
-  xmlhttp.open("GET", "gettasks.php?user="+user+"&projet_id="+id, true);
-  console.log("gettasks.php?user=julien&projet_id="+id)
-  xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          let listeTache = this.responseText;
-          replaceTasksWith(listeTache);
-
-      }
-  };
-  xmlhttp.send();
-
-
-
-})

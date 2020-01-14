@@ -77,6 +77,12 @@ require "gettasks.php";
               <ul id="listeTaches">
                 <?php echo getTasks('all', $_GET['id']); ?>
               </ul>
+              <form class="formAjoutDeTache" action="addTask.php" method="post">
+                <input type="hidden" name="projetId" value="<?php echo $_GET['id']; ?>"class-"hiddenValueProjectId" />
+                <input type="hidden" name="currentUserForTasks" value="all" class="hiddenValueCurrentUser" />
+                <textarea name="description" rows="2" cols="100"></textarea>
+                <button type="submit" name="button">OK</button>
+              </form>
 
             </div>
 
@@ -108,6 +114,7 @@ require "gettasks.php";
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/details.js"></script>
+    <script src="../js/tasks.js" charset="utf-8"></script>
 
 
 

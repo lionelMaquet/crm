@@ -1,5 +1,7 @@
 <?php
 
+// PAGE WHEN ADDING A PROJECT
+
 $projectTitle = $_POST['projectTitle'];
 
 $projectDate = date("Y-m-d", strtotime($_POST['projectDate']));
