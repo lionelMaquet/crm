@@ -3,9 +3,10 @@
 // Accès en AJAX
 
 
-$taskDescription = $_GET['description'];
+$taskDescription = addslashes($_GET['description']) ;
 $user = $_GET['username'];
 $projet_id = $_GET['projectID'];
+
 
 
 require 'connection.php';

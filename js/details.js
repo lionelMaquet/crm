@@ -9,12 +9,12 @@ function addUser(user, projectID) {
 }
 
 
-$('#addUserButton').on('click', () => {
-  $('.hidden').removeClass('hidden')
+$('#addUserButton').on('click', () => { // fait apparaître les noms masqués et le bouton valider, cache le bouton pour ajouter
+  $('.hidden').removeClass('hidden');
   $('#addUserButton').addClass('hidden');
 })
 
-$('#validateAddUser').on('click', () => {
+$('#validateAddUser').on('click', () => { // fait disparaître les utilisateurs qui n'ont pas été ajoutés, cache le bouton pour confirmer et apparaître l'autre
   $('.hiddenColor').addClass('hidden')
   $('#validateAddUser').addClass('hidden')
   $('#addUserButton').removeClass('hidden')

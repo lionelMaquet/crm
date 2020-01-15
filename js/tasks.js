@@ -100,9 +100,10 @@ $(document).on('click', ".addTaskButton", function() {
 
 
   var xmlhttp = new XMLHttpRequest();
+  let url = "addTask.php?projectID="+projectID+"&username="+username+"&description="+description
+  url = encodeURI(url);
 
-  xmlhttp.open("GET", "addTask.php?projectID="+projectID+"&username="+username+"&description="+description, true);
-  console.log("addTask.php?projectID="+projectID+"&username="+username+"&description="+description)
+  xmlhttp.open("GET", url, true);
 
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {

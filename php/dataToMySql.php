@@ -2,15 +2,15 @@
 
 // PAGE WHEN ADDING A PROJECT
 
-$projectTitle = $_POST['projectTitle'];
+$projectTitle = addslashes($_POST['projectTitle']);
 
 $projectDate = date("Y-m-d", strtotime($_POST['projectDate']));
 
-$briefing = $_POST['briefing'];
-$remarques = $_POST['remarques'];
-$userJ = $_POST['userJ'];
-$userG = $_POST['userG'];
-$userL = $_POST['userL'];
+$briefing = addslashes($_POST['briefing']);
+$remarques = addslashes($_POST['remarques']);
+$userJ = addslashes($_POST['userJ']);
+$userG = addslashes($_POST['userG']);
+$userL = addslashes($_POST['userL']);
 
 function addProjects($projectTitle, $projectDate, $briefing, $remarques, $userJ, $userG, $userL ) {
   require 'connection.php';
