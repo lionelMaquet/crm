@@ -66,7 +66,7 @@ require "../config.php";
             <div class="remarques">
               <h2>Remarques</h2>
               <p class="briefingOuRemarqueP remarqueP"><?php echo $remarque; ?></p>
-              
+
               <textarea name="name"  rows="8" cols="80" class="briefingOuRemarqueTextarea remarqueTextarea textzoneHidden" >test 1er janvier</textarea>
               <img src="../assets/addButton.png" class="changeBriefingOuRemarqueButton modifyButton" onclick="allowBriefingAndRemarksChange()" alt="">
               <img src="../assets/ok.png" class="changeBriefingOuRemarqueButton changeStateButtonHidden commitButton" onclick="<?php echo "commitBriefingAndRemarksChange(".$_GET['id'].")" ?>"  alt="">
@@ -113,8 +113,9 @@ require "../config.php";
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../js/details.js"></script>
     <script src="../js/tasks.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/details.js"></script>
+
 
 
 

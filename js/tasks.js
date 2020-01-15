@@ -3,32 +3,47 @@
 
 let usernameOfSelectedUser;
 
-// le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
-if (!$($('.username').get(0)).hasClass('hiddenColor')){
-  selectUserForTask($('.username')[0])
-  usernameOfSelectedUser = $('.username')[0].id
-}
+function selectFirstUserForTasks() {
 
-else if (!$($('.username').get(1)).hasClass('hiddenColor')){
-  selectUserForTask($('.username')[1])
-  usernameOfSelectedUser = $('.username')[1].id
-}
-
-else if (!$($('.username').get(2)).hasClass('hiddenColor')){
-    selectUserForTask($('.username')[2])
-    usernameOfSelectedUser = $('.username')[2].id
+  // le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
+  if (!$($('.username').get(0)).hasClass('hiddenColor')){
+    selectUserForTask($('.username')[0])
+    usernameOfSelectedUser = $('.username')[0].id
   }
+
+  else if (!$($('.username').get(1)).hasClass('hiddenColor')){
+    selectUserForTask($('.username')[1])
+    usernameOfSelectedUser = $('.username')[1].id
+  }
+
+  else if (!$($('.username').get(2)).hasClass('hiddenColor')){
+      selectUserForTask($('.username')[2])
+      usernameOfSelectedUser = $('.username')[2].id
+    }
+
+
+
+}
+
+selectFirstUserForTasks()
+
+
 
 
 
 function selectUserForTask(target){ // target is the p
 
-  $('.username').removeClass('selectedForTasks');
-  $(target).addClass('selectedForTasks');
-  $('.hiddenValueCurrentUser').val(target.id) // pour l'ajout de taches, savoir à qui l'ajouter
-  $('#nameOfCurrentUserForTasks').html(target.id)
-  usernameOfSelectedUser = target.id
-  refreshListOfTasks()
+  if  (!$('#addUserButton').hasClass('hidden')){
+    $('.username').removeClass('selectedForTasks');
+    $(target).addClass('selectedForTasks');
+    $('.hiddenValueCurrentUser').val(target.id) // pour l'ajout de taches, savoir à qui l'ajouter
+    $('#nameOfCurrentUserForTasks').html(target.id)
+    usernameOfSelectedUser = target.id
+    refreshListOfTasks()
+
+  }
+
+
 
 }
 
