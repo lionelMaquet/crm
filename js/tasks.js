@@ -8,35 +8,29 @@ function selectFirstUserForTasks() {
   // le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
   if (!$($('.username').get(0)).hasClass('hiddenColor')){
     console.log('first should')
-    selectUserForTask($('.username')[0])
-    usernameOfSelectedUser = $('.username')[0].id
+    selectUserForTask($('.username').get(0))
+    usernameOfSelectedUser = $('.username').get(0).id
   }
 
   else if (!$($('.username').get(1)).hasClass('hiddenColor')){
     console.log('second should')
-    selectUserForTask($('.username')[1])
-    usernameOfSelectedUser = $('.username')[1].id
+    selectUserForTask($('.username').get(1))
+    usernameOfSelectedUser = $('.username').get(1).id
   }
 
   else if (!$($('.username').get(2)).hasClass('hiddenColor')){
     console.log('third should')
-      selectUserForTask($('.username')[2])
-      usernameOfSelectedUser = $('.username')[2].id
+      selectUserForTask($('.username').get(2))
+      usernameOfSelectedUser = $('.username').get(2).id
     }
-
-
 
 }
 
 selectFirstUserForTasks()
 
 
-
-
-
 function selectUserForTask(target){ // target is the p
 
-  if  (!$('#addUserButton').hasClass('hidden')){
     $('.username').removeClass('selectedForTasks');
     $(target).addClass('selectedForTasks');
     $('.hiddenValueCurrentUser').val(target.id) // pour l'ajout de taches, savoir à qui l'ajouter
@@ -44,19 +38,14 @@ function selectUserForTask(target){ // target is the p
     usernameOfSelectedUser = target.id
     refreshListOfTasks()
 
-  }
-
-
-
 }
 
 $(document).on('click',".username", function(){
 
-  selectUserForTask(event.target)
-
+    if  (!$('#addUserButton').hasClass('hidden')){
+    selectUserForTask(event.target)
+  }
 })
-
-
 
 
 // RAFRAICHISSEMENT DES LISTES
@@ -165,7 +154,5 @@ $(document).on('click', ".taskDiv p", function(){
 
   };
   xmlhttp.send();
-
-
 
 })

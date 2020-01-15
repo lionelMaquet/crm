@@ -20,20 +20,11 @@ function toggleUserParticipation(user, projectID) {
       $(event.target).addClass('hidden')
 
       if ($(event.target).hasClass('selectedForTasks')){
-        $(event.target).removeClass('selectedForTasks')
+        //$(event.target).removeClass('selectedForTasks')
         selectFirstUserForTasks()
       }
-
-
-
-
     }
-
-
   }
-
-
-
 }
 
 
