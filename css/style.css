@@ -58,6 +58,7 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
+  width: 70%;
 }
 
 .nav_ul {

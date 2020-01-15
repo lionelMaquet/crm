@@ -17,10 +17,11 @@
     <div class="wrapper">
       <div class="side_section bg_blue">
 
-        <h1 id="neutral_logo" class="white">neutral</h1>
+        <img src="../assets/Neutral_waiting.png" id="neutral_logo" alt="">
+
 
         <ul class="nav_ul list_style_none white">
-          <li>Projet</li>
+          <li> <a href="../projet.php">Projet </a></li>
           <li>New idée</li>
           <li>Agenda</li>
           <li>Contact</li>

@@ -1,4 +1,7 @@
-<?php include "php/getprojects.php"; ?>
+<?php include "php/getprojects.php";
+      include "config.php";
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -14,7 +17,7 @@
     <div class="wrapper">
       <div class="side_section bg_blue">
 
-        <h1 id="neutral_logo" class="white">neutral</h1>
+        <img src="assets/Neutral_waiting.png" id="neutral_logo" alt="">
 
         <ul class="nav_ul list_style_none white">
           <li><a href="projet.php">Projet</a></li>
