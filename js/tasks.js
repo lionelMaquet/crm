@@ -113,5 +113,40 @@ $(document).on('click', ".addTaskButton", function() {
   };
   xmlhttp.send();
 
+})
+
+
+// MARQUER TACHE COMME FAITE
+
+function changerStyleStatutTache(element){
+  if (element.hasClass('taskDone')){
+    element.removeClass('taskDone')
+  }else {
+    element.addClass('taskDone')
+  }
+}
+
+$(document).on('click', ".taskDiv p", function(){
+
+  let taskID = $(event.target).next().val()
+  let p = $(event.target)
+
+
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET", "editTask.php?q=taskstatut&taskid="+taskID, true);
+
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText)
+        changerStyleStatutTache(p)
+
+    }
+
+
+  };
+  xmlhttp.send();
+
+
 
 })

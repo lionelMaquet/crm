@@ -4,7 +4,12 @@ function displayTask($task){
 
   echo '<br>';
   echo "<div class='taskDiv'>";
-    echo "<p>";
+
+    if ($task['fait'] == 'oui'){
+      echo "<p class='taskDone'>";
+    } else {
+      echo "<p>";
+    }
       echo $task['description'];
     echo "</p>";
     echo "<button class='deleteTaskButton' value='".$task['tache_id']."'>X</button>";

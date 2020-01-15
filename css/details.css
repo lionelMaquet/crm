@@ -179,4 +179,10 @@
 
 .taskDiv p {
   word-break: break-all;
+  cursor: pointer;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  color: lightgrey;
 }
