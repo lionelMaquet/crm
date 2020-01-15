@@ -7,16 +7,19 @@ function selectFirstUserForTasks() {
 
   // le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
   if (!$($('.username').get(0)).hasClass('hiddenColor')){
+    console.log('first should')
     selectUserForTask($('.username')[0])
     usernameOfSelectedUser = $('.username')[0].id
   }
 
   else if (!$($('.username').get(1)).hasClass('hiddenColor')){
+    console.log('second should')
     selectUserForTask($('.username')[1])
     usernameOfSelectedUser = $('.username')[1].id
   }
 
   else if (!$($('.username').get(2)).hasClass('hiddenColor')){
+    console.log('third should')
       selectUserForTask($('.username')[2])
       usernameOfSelectedUser = $('.username')[2].id
     }

@@ -3,21 +3,17 @@ function toggleUserParticipation(user, projectID) {
 
   if ($('#addUserButton').hasClass('hidden')){ // si on est en train de modifier les users
 
-    if ($(event.target).hasClass('hiddenColor')){
+    if ($(event.target).hasClass('hiddenColor')){ // ajouter un user
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.open("GET", "adduser.php?id=" + projectID + "&user=" + user, true);
       xmlhttp.send();
       $(event.target).removeClass('hiddenColor')
-    } else {
+    }
+
+
+    else { // supprimer un user
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.open("GET", "deleteuser.php?id=" + projectID + "&user=" + user, true);
-
-      xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              console.log(this.responseText)
-
-          }
-      };
       xmlhttp.send();
 
       $(event.target).addClass('hiddenColor')
@@ -27,6 +23,7 @@ function toggleUserParticipation(user, projectID) {
         $(event.target).removeClass('selectedForTasks')
         selectFirstUserForTasks()
       }
+
 
 
 
