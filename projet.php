@@ -53,9 +53,9 @@
         </a>
 
         <div class="users">
-          <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects('avenir') ; resetStatutHighlight()" >G</button>
-          <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects('avenir') ; resetStatutHighlight()">J</button>
-          <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects('avenir') ; resetStatutHighlight()">L</button>
+          <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects('avenir') " >G</button>
+          <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects('avenir') ">J</button>
+          <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects('avenir') ">L</button>
         </div>
 
       </div>

@@ -40,9 +40,3 @@ $('.button_statut').click(event => {
   $('.button_statut').removeClass("selected");
   $(event.target).addClass("selected");
 })
-
-function resetStatutHighlight() {
-  /* $('.button_statut').removeClass("selected");
-  $('.avenir').addClass("selected"); */
-
-}

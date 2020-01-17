@@ -28,14 +28,14 @@ function getTasks($user, $projet_id) {
 
     if ($user == 'all') {
 
-      $sql = "SELECT * FROM tache WHERE projet_id = ".$projet_id."  ";
+      $sql = "SELECT * FROM tache WHERE projet_id = ".$projet_id." ORDER BY  `tache_id` ASC  ";
       $result = $conn->query($sql);
 
     }
 
     else if ($user == 'julien' || $user =='gilles' || $user == 'lionel') {
 
-    $sql = "SELECT * FROM tache WHERE utilisateur = '".$user."' AND projet_id = ". $projet_id ;
+    $sql = "SELECT * FROM tache WHERE utilisateur = '".$user."' AND projet_id = ". $projet_id ." ORDER BY `tache_id` ASC" ;
     $result = $conn->query($sql);
 
 
