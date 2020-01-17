@@ -31,7 +31,7 @@
       <div class="project_section">
 
         <div class="header">
-          <h1 class="blue" id="title">Projets</h1>
+           <h1 class="blue" id="title">Projets de tous</h1>
         </div>
 
         <div class="statuts">
@@ -53,9 +53,10 @@
         </a>
 
         <div class="users">
-          <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects('avenir') " >G</button>
-          <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects('avenir') ">J</button>
-          <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects('avenir') ">L</button>
+          <button id="selectUserAll" href="projet.php?user=all" onclick="setUser('all') ; getProjects()">All </button>
+          <button  id="selectUserG" href="projet.php?user=G" onclick="setUser('gilles') ; getProjects() " >G</button>
+          <button  id="selectUserJ" href="projet.php?user=J" onclick="setUser('julien') ; getProjects() ">J</button>
+          <button  id="selectUserL" href="projet.php?user=L" onclick="setUser('lionel') ; getProjects() ">L</button>
         </div>
 
       </div>

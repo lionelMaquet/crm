@@ -6,11 +6,11 @@ function setUser(user) {
 
   if (currentUser == "all") {
 
-    $('#title').html("Projets")
+    $('#title').html("Projets de tous")
   }
 
   else {
-    $('#title').html(currentUser.charAt(0).toUpperCase() + currentUser.substring(1))
+    $('#title').html("Projets de " + currentUser.charAt(0).toUpperCase() + currentUser.substring(1))
   }
 
 }
@@ -22,15 +22,17 @@ function setStatut(statut){
 
 function getProjects() {
 
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "php/getprojects.php?q=" + currentStatut + "&user=" + currentUser, true);
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("ul_list_of_projects").innerHTML = this.responseText;
-        }
-    };
 
-    xmlhttp.send();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", "php/getprojects.php?q=" + currentStatut + "&user=" + currentUser, true);
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("ul_list_of_projects").innerHTML = this.responseText;
+          }
+      };
+
+      xmlhttp.send();
+
 
 }
 
