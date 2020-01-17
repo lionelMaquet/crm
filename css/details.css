@@ -195,7 +195,6 @@
 }
 
 .taskDiv p {
-  word-break: break-all;
   cursor: pointer;
 }
 
