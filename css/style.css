@@ -152,6 +152,11 @@ body {
   transition: background-color 0.13s;
 }
 
+.div_li_project p {
+  display:flex;
+  align-items:center;
+}
+
 .div_li_project:hover {
   background-color:#D8E5E8
 }
