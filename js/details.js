@@ -124,7 +124,7 @@ if (heightOfRemarqueP > 100) {
 
  // Insérer le texte de p dans textarea
 
-$('.briefingTextarea').html($('.briefingP').html().replace(/<br\s*[\/]?>/gi, "\n")); // remplacement des <br> par des <\n>
+$('.briefingTextarea').html($('.briefingP').html().replace(/<br\s*[\/]?>/gi, "\n")); // remplacement des <br> par des <\n>, le remplacement inverse s'effectue aussi
 $('.remarqueTextarea').html($('.remarqueP').html().replace(/<br\s*[\/]?>/gi, "\n"));
 
 
@@ -173,7 +173,6 @@ function commitBriefingAndRemarksChange(id) {
   let briefingTextAreaWithLineBreaks = $('.briefingTextarea').val().replace(/\n\r?/g, '<br />')
   let remarqueTextAreaWithLineBreaks = $('.remarqueTextarea').val().replace(/\n\r?/g, '<br />')
 
-  //xmlhttp.open("GET", "updatebriefandrem.php?id=" + id + "&briefing=" + $('.briefingTextarea').val() + "&remarque=" + $('.remarqueTextarea').val() , true);
   xmlhttp.open("GET", "updatebriefandrem.php?id=" + id + "&briefing=" + briefingTextAreaWithLineBreaks + "&remarque=" + remarqueTextAreaWithLineBreaks , true);
 
 
