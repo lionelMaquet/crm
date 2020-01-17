@@ -57,7 +57,9 @@ body {
 #neutral_logo {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 0px;
+  right: 0px;
+  margin:auto;
   width: 70%;
 }
 
