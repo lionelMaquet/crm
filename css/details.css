@@ -87,6 +87,8 @@
 
 .briefingOuRemarqueP{
   white-space: pre-wrap;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 
  .main .right .taches{
@@ -110,9 +112,9 @@
   color: black;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  overflow:scroll;
   height: 200px;
   text-align: justify;
+
 }
 
 .main .left textarea {
@@ -120,6 +122,8 @@
   box-sizing: border-box;
   width: 100%;
   resize: none;
+  overflow-y: scroll;
+  overflow-x:hidden;
 }
 
 .buttondiv {

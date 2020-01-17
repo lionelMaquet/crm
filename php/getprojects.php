@@ -4,8 +4,12 @@ function display($row) {
 
   $date = date("d / m / Y", strtotime($row["deadline"]));
 
-  echo "<a href=php/details.php?id=".$row['projet_id'].">";
+
     echo "<li class='li_project'>";
+
+
+
+    echo "<a href=php/details.php?id=".$row['projet_id'].">";
         echo "<div class='div_li_project'>";
 
           echo "<h2>".$row["titre"]."</h2>";
@@ -14,10 +18,10 @@ function display($row) {
             echo "<p> deadline indefinie </p>";
           } else {echo "<p>".$date."</p>";}
 
-
         echo "</div>";
+        echo "</a>";
     echo "</li>";
-  echo "</a>";
+
 
   echo "<br>";
 }
