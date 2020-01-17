@@ -36,9 +36,9 @@
 
         <div class="statuts">
           <ul class="list_style_none">
-            <button type="button" name="button" value="avenir" onclick="getProjects('avenir')" class="button_statut selected avenir">A venir</button>
-            <button type="button" name="button" value="encours" onclick="getProjects('encours')" class="button_statut encours">En cours</button>
-            <button type="button" name="button" value="termine" onclick="getProjects('termine')" class="button_statut termine">Terminé</button>
+            <button type="button" name="button" value="avenir" onclick="setStatut('avenir') ; getProjects()" class="button_statut  avenir">A venir</button>
+            <button type="button" name="button" value="encours" onclick="setStatut('encours') ; getProjects()" class="button_statut selected encours">En cours</button>
+            <button type="button" name="button" value="termine" onclick="setStatut('termine') ; getProjects()" class="button_statut termine">Terminé</button>
           </ul>
         </div>
 
