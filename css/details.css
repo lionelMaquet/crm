@@ -84,6 +84,11 @@
   padding: 20px 20px;
 
 }
+
+.briefingOuRemarqueP{
+  white-space: pre-wrap;
+}
+
  .main .right .taches{
   overflow: scroll;
   overflow-x: hidden;
