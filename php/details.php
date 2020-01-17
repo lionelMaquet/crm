@@ -24,7 +24,7 @@ require "../config.php";
     <div class="wrapper">
       <div class="side_section bg_blue">
 
-        <img src="../assets/Neutral_waiting.png" id="neutral_logo" alt="">
+        <img src="../assets/Logo_Neutral_White.png" id="neutral_logo" alt="">
 
 
         <ul class="nav_ul list_style_none white">
