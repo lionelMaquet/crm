@@ -2,12 +2,18 @@
 
 function display($row) {
 
+  $date = date("d / m / Y", strtotime($row["deadline"]));
+
   echo "<a href=php/details.php?id=".$row['projet_id'].">";
     echo "<li class='li_project'>";
         echo "<div class='div_li_project'>";
 
           echo "<h2>".$row["titre"]."</h2>";
-          echo "<p>".date("d-m-Y", strtotime($row["deadline"]))."</p>";
+
+          if ($date == '01 / 01 / 1970') { // si la date est celle se mettant de base en mysql
+            echo "<p> deadline indefinie </p>";
+          } else {echo "<p>".$date."</p>";}
+
 
         echo "</div>";
     echo "</li>";
