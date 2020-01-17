@@ -182,11 +182,13 @@
   height: 50px;
   resize: none;
   border:none;
-  background-color: lightblue;
+  background-color: white;
+  border: solid 2px #0c5061;
   border-radius: 10px;
 }
 
 .addTaskButton {
+  color: #0c5061
 }
 
 #listeTaches{

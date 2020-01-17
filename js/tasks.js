@@ -99,6 +99,29 @@ $(document).on('click', ".deleteTaskButton", function() {
 
 // ADD TASK
 
+$(".textareaAddTask").on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      let username = usernameOfSelectedUser
+      let description = $('.textareaAddTask').val()
+
+
+      var xmlhttp = new XMLHttpRequest();
+      let url = "addTask.php?projectID="+projectID+"&username="+username+"&description="+description
+      url = encodeURI(url);
+
+      xmlhttp.open("GET", url, true);
+
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              refreshListOfTasks();
+              $('.textareaAddTask').val('')
+          }
+
+      };
+      xmlhttp.send();
+
+    }
+});
 
 $(document).on('click', ".addTaskButton", function() {
 
