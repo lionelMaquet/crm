@@ -28,6 +28,12 @@ function getProjects() {
       xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
               document.getElementById("ul_list_of_projects").innerHTML = this.responseText;
+
+              $( ".datepicker" ).datepicker({
+                dateFormat: 'dd-mm-yy'
+              });
+
+
           }
       };
 

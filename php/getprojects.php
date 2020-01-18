@@ -1,30 +1,43 @@
 <?php
 
+
 function display($row) {
 
   $date = date("d / m / Y", strtotime($row["deadline"]));
 
 
-    echo "<li class='li_project'>";
 
 
 
-    echo "<a href=php/details.php?id=".$row['projet_id'].">";
+    echo "<li class = 'li_project'>";
+      echo "<a href=php/details.php?id=".$row['projet_id'].">";
         echo "<div class='div_li_project'>";
 
           echo "<h2>".$row["titre"]."</h2>";
+          echo "<textarea class='hidden' rows='1'></textarea>";
 
           if ($date == '01 / 01 / 1970') { // si la date est celle se mettant de base en mysql
             echo "<p> deadline indefinie </p>";
-          } else {echo "<p>".$date."</p>";}
+          } else {echo "<p data-value ='".date("d-m-Y", strtotime($row["deadline"]))."' >".$date."</p>";}
+          echo "<input class='datepicker hidden' type='text' name='fname'>";
 
         echo "</div>";
-        echo "</a>";
-    echo "</li>";
+      echo "</a>";
+      echo "<img src='assets/edit.png' class='img_edit_pencil ' data-projet-id ='".$row['projet_id']."'>";
+      echo "<img src='assets/commit.png' class='img_commit_pencil hidden' data-projet-id ='".$row['projet_id']."'>";
 
+      echo "<img src='assets/delete.png' class = 'img_delete_project hidden' data-projet-id ='".$row['projet_id']."''>";
+    echo "</li>";
 
   echo "<br>";
 }
+
+
+
+
+
+
+
 
 function getProjects($statut) {
 

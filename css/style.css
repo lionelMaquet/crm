@@ -131,16 +131,18 @@ body {
 #ul_list_of_projects a {
   text-decoration: none;
   color: black;
+
 }
 
 .li_project {
   width: 100%;
   display:flex;
   justify-content: center;
+  align-items:center;
 }
 
 .li_project a {
-  width: 70%;
+width: 70%;
 }
 
 .div_li_project {
@@ -222,4 +224,55 @@ button:focus{
 .nav_ul a {
   color: white;
   text-decoration: none;
+}
+
+
+
+
+/* EDIT PROJECT */
+
+.hidden {
+  display:none !important;
+}
+
+.img_edit_pencil {
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.li_project:hover > .img_edit_pencil{
+  opacity: 1
+}
+
+.img_edit_pencil, .img_commit_pencil {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.img_delete_project {
+  width: 25px;
+  height: 25px;
+  cursor :pointer;
+  margin-left: 10px;
+}
+
+.div_li_project textarea {
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  resize: none;
+}
+
+.datepicker {
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border: none;
+  resize: none;
+  text-align:right;
+  border-left:solid 1px black;
 }
