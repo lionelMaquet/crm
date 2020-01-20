@@ -92,14 +92,14 @@
     position: relative;
     bottom: unset;
     top: 10vh;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
     width: 50%;
 
   }
 
   #selectUserGNewProject, #selectUserJNewProject, #selectUserLNewProject {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     font-size: 24px;
     border-radius: 80px;
   }

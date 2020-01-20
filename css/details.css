@@ -233,7 +233,7 @@
     bottom: -50px;
   }
 
-  .briefing h2 {
+  .briefing h2, .remarques h2, .taches h2 {
     font-size: 34px;
   }
 
@@ -263,5 +263,19 @@
 
   #addUserButton, #validateAddUser{
     width: 50px;
+  }
+
+  .main .left .briefing, .main .left .remarques, .main .right .taches {
+
+    max-height:none;
+
+  }
+
+  .taskDiv {
+    height: 60px;
+  }
+
+  .taskDiv p, .taskDiv button {
+    font-size: 24px;
   }
 }

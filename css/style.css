@@ -273,6 +273,22 @@ button:focus{
     margin-bottom: 10px;
   }
 
+  .div_li_project{
+    height: 70px;
+    display:flex;
+    align-items:center;
+  }
+
+  .project_section a {
+    text-align:center;
+  }
+
+  .project_section a img {
+    position: relative;
+    bottom: 0px;
+
+  }
+
   .div_li_project h2, .div_li_project textarea {
     font-size: 25px;
   }
@@ -289,7 +305,7 @@ button:focus{
     right: 0px;
     left: 0px;
     margin: auto;
-    bottom: 17vh;
+    bottom: 10vh;
     width: 70vw;
   }
 
@@ -313,8 +329,8 @@ button:focus{
     height: 50px;
     position: absolute;
     z-index: 4;
-    right: 10px;
-    top: 10px;
+    right: 50px;
+    top: 50px;
   }
 
 
@@ -381,4 +397,8 @@ button:focus{
   resize: none;
   text-align:right;
   border-left:solid 1px black;
+}
+
+.ham-hidden{
+  display:none;
 }
