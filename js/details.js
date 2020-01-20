@@ -19,7 +19,6 @@ function toggleUserParticipation(user, projectID) {
       $(event.target).addClass('hiddenColor')
 
       if ($(event.target).hasClass('selectedForTasks')){
-        //$(event.target).removeClass('selectedForTasks')
         selectFirstUserForTasks()
       }
     }
@@ -95,46 +94,29 @@ function changeStatut(projectID) {
 function allowBriefingAndRemarksChange() {
 
 
-
-
  // cacher les p
-
 $('.briefingOuRemarqueP').addClass('textzoneHidden')
-
  // Montrer les textarea
-
 $('.briefingOuRemarqueTextarea').removeClass('textzoneHidden')
-
-
 // donner la meme hauteur que le div à la textarea
-
 let heightOfBriefingP = $('.briefingP').height()
 
 if (heightOfBriefingP > 100) { // empêche la textarea de valoir 0 de haut lorsque le p est vide
   $('.briefingTextarea').css("height", heightOfBriefingP+"px")
 }
 
-
 let heightOfRemarqueP = $('.remarqueP').height()
 if (heightOfRemarqueP > 100) {
   $('.remarqueTextarea').css("height", heightOfRemarqueP+"px")
-
 }
 
  // Insérer le texte de p dans textarea
-
 $('.briefingTextarea').html($('.briefingP').html().replace(/<br\s*[\/]?>/gi, "\n")); // remplacement des <br> par des <\n>, le remplacement inverse s'effectue aussi
 $('.remarqueTextarea').html($('.remarqueP').html().replace(/<br\s*[\/]?>/gi, "\n"));
-
-
  // cacher bouton +
-
  $('.modifyButton').addClass('changeStateButtonHidden')
-
  // montrer bouton OK
-
  $('.commitButton').removeClass('changeStateButtonHidden')
-
 }
 
 
@@ -142,30 +124,17 @@ $('.remarqueTextarea').html($('.remarqueP').html().replace(/<br\s*[\/]?>/gi, "\n
 function commitBriefingAndRemarksChange(id) {
 
   // 1 : cacher les textarea
-
   $('.briefingOuRemarqueTextarea').addClass('textzoneHidden')
-
   // 2 : montrer les p
-
   $('.briefingOuRemarqueP').removeClass('textzoneHidden')
-
-
   // 3 : insérer le texte des textarea dans les p
-
   $('.briefingP').html($('.briefingTextarea').val())
   $('.remarqueP').html($('.remarqueTextarea').val())
-
   // 4 : cacher bouton OK
-
   $('.modifyButton').removeClass('changeStateButtonHidden')
-
   // 5 : montrer bouton +
-
   $('.commitButton').addClass('changeStateButtonHidden')
-
   // 6 : appeler la page updatebriefandrem.php pour changer les valeurs dans la db
-
-
 
   var xmlhttp = new XMLHttpRequest();
 

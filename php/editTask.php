@@ -5,11 +5,10 @@ require 'connection.php';
 if ($_GET['q'] == 'taskstatut') {
 
   $taskID = $_GET['taskid'];
+  $statutActuel;
 
   $sql = "SELECT `fait` FROM tache WHERE tache_id = " . $taskID;
   $result = $conn->query($sql);
-
-  $statutActuel;
 
   if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
@@ -29,10 +28,5 @@ if ($_GET['q'] == 'taskstatut') {
   }
 
 }
-
-
-
-
-
 
  ?>

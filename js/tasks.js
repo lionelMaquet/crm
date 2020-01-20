@@ -7,23 +7,19 @@ function selectFirstUserForTasks() {
 
   // le double $$ est pour convertir l'élément en objet jquery. Sinon le hasClass() ne fonctionne pas
   if (!$($('.username').get(0)).hasClass('hiddenColor')){
-    console.log('first should')
     selectUserForTask($('.username').get(0))
     usernameOfSelectedUser = $('.username').get(0).id
   }
 
   else if (!$($('.username').get(1)).hasClass('hiddenColor')){
-    console.log('second should')
     selectUserForTask($('.username').get(1))
     usernameOfSelectedUser = $('.username').get(1).id
   }
 
   else if (!$($('.username').get(2)).hasClass('hiddenColor')){
-    console.log('third should')
       selectUserForTask($('.username').get(2))
       usernameOfSelectedUser = $('.username').get(2).id
     }
-
 }
 
 selectFirstUserForTasks()
@@ -41,7 +37,6 @@ function selectUserForTask(target){ // target is the p
 }
 
 $(document).on('click',".username", function(){
-
     if  (!$('#addUserButton').hasClass('hidden')){
     selectUserForTask(event.target)
   }
@@ -69,16 +64,11 @@ function refreshListOfTasks(){
 }
 
 
-
-
-
-
 // DELETE TASK
 
 $(document).on('click', ".deleteTaskButton", function() {
 
   let taskId = $(event.target).val()
-  console.log(taskId)
 
   var xmlhttp = new XMLHttpRequest();
 
@@ -90,8 +80,8 @@ $(document).on('click', ".deleteTaskButton", function() {
 
       }
   };
-  xmlhttp.send();
 
+  xmlhttp.send();
 
 })
 
@@ -99,35 +89,9 @@ $(document).on('click', ".deleteTaskButton", function() {
 
 // ADD TASK
 
-$(".textareaAddTask").on('keyup', function (e) {
-    if (e.keyCode === 13) {
-      let username = usernameOfSelectedUser
-      let description = $('.textareaAddTask').val()
-
-
-      var xmlhttp = new XMLHttpRequest();
-      let url = "addTask.php?projectID="+projectID+"&username="+username+"&description="+description
-      url = encodeURI(url);
-
-      xmlhttp.open("GET", url, true);
-
-      xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              refreshListOfTasks();
-              $('.textareaAddTask').val('')
-          }
-
-      };
-      xmlhttp.send();
-
-    }
-});
-
-$(document).on('click', ".addTaskButton", function() {
-
+function addTask(){
   let username = usernameOfSelectedUser
   let description = $('.textareaAddTask').val()
-
 
   var xmlhttp = new XMLHttpRequest();
   let url = "addTask.php?projectID="+projectID+"&username="+username+"&description="+description
@@ -143,7 +107,16 @@ $(document).on('click', ".addTaskButton", function() {
 
   };
   xmlhttp.send();
+}
 
+$(".textareaAddTask").on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      addTask()
+    }
+});
+
+$(document).on('click', ".addTaskButton", function() {
+  addTask()
 })
 
 
@@ -161,7 +134,6 @@ $(document).on('click', ".taskDiv p", function(){
 
   let taskID = $(event.target).next().val()
   let p = $(event.target)
-
 
   var xmlhttp = new XMLHttpRequest();
 

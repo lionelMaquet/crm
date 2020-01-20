@@ -8,7 +8,6 @@ if (isset($_SESSION['UserLoggedIn']) && $_SESSION['UserLoggedIn'] == true){
   die();
 }
 
-
 ?>
 
 <!DOCTYPE html>

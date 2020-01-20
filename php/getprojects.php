@@ -5,10 +5,6 @@ function display($row) {
 
   $date = date("d / m / Y", strtotime($row["deadline"]));
 
-
-
-
-
     echo "<li class = 'li_project'>";
       echo "<a href=php/details.php?id=".$row['projet_id'].">";
         echo "<div class='div_li_project'>";
@@ -31,12 +27,6 @@ function display($row) {
 
   echo "<br>";
 }
-
-
-
-
-
-
 
 
 function getProjects($statut) {
@@ -65,7 +55,7 @@ function getProjects($statut) {
   }
 }
 
-if ((isset($_GET['q']) && ($_GET != null))){
+if ((isset($_GET['q']) && ($_GET['q'] != null))){
   getProjects($_GET['q']);
 }
 

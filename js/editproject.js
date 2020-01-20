@@ -34,18 +34,9 @@ $(document).on('click', '.img_edit_pencil', function(){
 $(document).on('click', '.img_commit_pencil', function(){
 
   let parent = $(event.target).parent(); // le parent est le <li>
-
-  // changer la data du titre et de la date
-  // changer le titre et la date
-  // cacher les inputs, remontrer les champs
-  // remettre le lien en marche
-  // insérer les valeurs dans la base de données
-  // recharger les projets
-
   let projectID = $(event.target).data('projet-id');
   let newTitle = parent.find('textarea').val()
   let newDate = parent.find('input').val()
-
 
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", `php/editproject.php?action=change&projectID=${projectID}&title=${newTitle}&date=${newDate}`, true);
@@ -57,7 +48,6 @@ $(document).on('click', '.img_commit_pencil', function(){
   };
 
   xmlhttp.send();
-
 
 })
 
@@ -74,10 +64,5 @@ $(document).on('click', '.img_delete_project', function(){
   };
 
   xmlhttp.send();
-
-
-  // supprimer le projet dans la base de données
-  // recharger les projets
-
 
 })

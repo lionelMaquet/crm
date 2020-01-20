@@ -3,9 +3,7 @@ let currentStatut = "encours"
 
 function setUser(user) {
   currentUser = user;
-
   if (currentUser == "all") {
-
     $('#title').html("Projets de tous")
   }
 
@@ -15,13 +13,13 @@ function setUser(user) {
 
 }
 
+
 function setStatut(statut){
   currentStatut = statut;
 }
 
 
 function getProjects() {
-
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.open("GET", "php/getprojects.php?q=" + currentStatut + "&user=" + currentUser, true);
@@ -39,12 +37,11 @@ function getProjects() {
 
       xmlhttp.send();
 
-
 }
-
-getProjects("encours");
 
 $('.button_statut').click(event => {
   $('.button_statut').removeClass("selected");
   $(event.target).addClass("selected");
 })
+
+getProjects("encours");

@@ -1,5 +1,11 @@
 <?php
+
+$details_id = $_GET['id']; // Doit être avant details_components
+
 require "redirecturl.php";
+require "details_components.php";
+require "gettasks.php";
+require "../config.php";
 
 session_start();
 if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
@@ -7,10 +13,8 @@ if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
   die();
 }
 
-$details_id = $_GET['id'];
-require "details_components.php";
-require "gettasks.php";
-require "../config.php";
+
+
 ?>
 
 <script type="text/javascript">

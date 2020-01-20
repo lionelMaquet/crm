@@ -2,11 +2,11 @@
 
 require "connection.php";
 
-$id = $details_id;
+$id = $details_id; // variable definie dans details.php, page accedant à celle-ci
 $sql = "SELECT * FROM projet WHERE projet_id = '".$id."'";
 $data = $conn->query($sql);
-$projectResult = $data->fetch_assoc();
 
+$projectResult = $data->fetch_assoc();
 $titre = $projectResult['titre'];
 $description = $projectResult['description'];
 $remarque = $projectResult['remarque'];
