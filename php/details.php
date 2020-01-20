@@ -1,6 +1,13 @@
 <?php
+require "redirecturl.php";
 
-$_SESSION["details_id"] = $_GET['id'];
+session_start();
+if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
+  header('Location:' .$redirecturlindex);
+  die();
+}
+
+$details_id = $_GET['id'];
 require "details_components.php";
 require "gettasks.php";
 require "../config.php";

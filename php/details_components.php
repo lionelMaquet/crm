@@ -2,7 +2,7 @@
 
 require "connection.php";
 
-$id = $_SESSION['details_id'];
+$id = $details_id;
 $sql = "SELECT * FROM projet WHERE projet_id = '".$id."'";
 $data = $conn->query($sql);
 $projectResult = $data->fetch_assoc();

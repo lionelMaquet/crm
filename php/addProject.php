@@ -1,3 +1,15 @@
+<?php
+require "redirecturl.php";
+
+session_start();
+
+if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
+  header('Location:' . $redirecturlindex);
+  die();
+}
+
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">

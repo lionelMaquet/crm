@@ -1,5 +1,15 @@
-<?php include "php/getprojects.php";
-      include "config.php";
+<?php
+
+require "php/redirecturl.php";
+
+session_start();
+if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
+  header('Location:' . $redirecturlindex);
+  die();
+}
+
+include "php/getprojects.php";
+include "config.php";
 
  ?>
 
