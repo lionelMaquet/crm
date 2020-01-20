@@ -27,6 +27,8 @@ include "config.php";
 
   <body>
 
+    <img src="assets/menu.png" class="hamburger_menu" alt="">
+
     <div class="wrapper">
       <div class="side_section bg_blue">
 
@@ -84,5 +86,6 @@ include "config.php";
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="projet.js"></script>
     <script src="js/editproject.js" charset="utf-8"></script>
+    <script src="js/ham_menu.js" charset="utf-8"></script>
   </body>
 </html>

@@ -32,6 +32,8 @@ if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
   </head>
 
   <body>
+    <img src="../assets/menu.png" class="hamburger_menu" alt="">
+
     <div class="wrapper">
       <div class="side_section bg_blue">
 
@@ -120,12 +122,14 @@ if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
 
     </div>
 
+
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/details.js"></script>
     <script src="../js/tasks.js" charset="utf-8"></script>
+    <script src="../js/ham_menu.js" charset="utf-8"></script>
 
 
 

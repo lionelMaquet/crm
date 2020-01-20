@@ -23,8 +23,11 @@ if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+
   </head>
   <body>
+
+    <img src="../assets/menu.png" class="hamburger_menu" alt="">
 
     <div class="wrapper">
       <div class="side_section bg_blue">
@@ -80,6 +83,7 @@ if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
 
     </div>
 
+    <script src="../js/ham_menu.js" charset="utf-8"></script>
     <script src="../js/addProject.js" charset="utf-8"></script>
   </body>
 </html>

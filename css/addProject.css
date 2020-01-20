@@ -86,3 +86,36 @@
   height: 50px;
   border-radius: 50px;
 }
+
+@media only screen and (max-width: 1100px){
+  .users {
+    position: relative;
+    bottom: unset;
+    top: 10vh;
+    margin-bottom: 200px;
+    width: 50%;
+
+  }
+
+  #selectUserGNewProject, #selectUserJNewProject, #selectUserLNewProject {
+    width: 130px;
+    height: 130px;
+    font-size: 24px;
+    border-radius: 80px;
+  }
+
+  .rowOne {
+    display: flex;
+  }
+
+  input, textarea {
+    font-size: 24px;
+  }
+
+  .submit {
+    width: 50vw;
+    height: 10vh;
+    border-radius: 25vw;
+    font-size: 24px;
+  }
+}
