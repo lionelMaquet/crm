@@ -5,7 +5,7 @@ $(document).on('click', '#login_button', function() {
 
   var xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.open("GET", `./php/connexion.php?username=${username}&password=${password}`, true);
+  xmlhttp.open("GET", `./php/login.php?username=${username}&password=${password}`, true);
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
 
