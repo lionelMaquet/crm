@@ -88,34 +88,53 @@
 }
 
 @media only screen and (max-width: 1100px){
+
+  .header h1 {
+    font-size: 20px !important;
+  }
+
+  .addProjectTitle {
+    margin-bottom: 20px;
+  }
+
+  .rowOne, .rowTwo {
+    margin-bottom: 20px;
+  }
+
   .users {
     position: relative;
     bottom: unset;
     top: 10vh;
-    margin-bottom: 300px;
+    margin-bottom: 10px;
     width: 50%;
 
   }
 
+  input, textarea {
+    box-sizing: border-box;
+    width: 100% !important;
+  }
+
   #selectUserGNewProject, #selectUserJNewProject, #selectUserLNewProject {
-    width: 100px;
-    height: 100px;
-    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
     border-radius: 80px;
   }
 
   .rowOne {
     display: flex;
+    flex-direction:column;
   }
 
   input, textarea {
-    font-size: 24px;
+    font-size: 12px;
   }
 
   .submit {
     width: 50vw;
     height: 10vh;
     border-radius: 25vw;
-    font-size: 24px;
+    font-size: 12px;
   }
 }

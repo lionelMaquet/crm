@@ -95,7 +95,6 @@ body {
 
 .project_section .header {
   position: relative;
-  min-height: 10%;
 }
 
 .project_section .header h1 {
@@ -232,6 +231,10 @@ button:focus{
 
 @media only screen and (max-width: 1100px){
 
+  #title {
+    font-size: 20px;
+  }
+
   #neutral_logo {
     top: 8vh;
     width: 40%;
@@ -245,7 +248,7 @@ button:focus{
   }
 
   .nav_ul li {
-    font-size: 40px;
+    font-size: 12px;
   }
 
   .project_section{
@@ -255,17 +258,23 @@ button:focus{
 
   .statuts {
     margin-bottom: 50px;
+    min-height:0px;
+    height: auto;
+    margin-top: 80px;
   }
 
   .statuts ul {
     width: 100%;
     display: flex;
     justify-content:space-around;
+    position: relative;
+    right: 10px;
+
 
   }
 
   .statuts ul button {
-    font-size: 40px;
+    font-size: 12px;
   }
 
   .li_project a {
@@ -274,7 +283,7 @@ button:focus{
   }
 
   .div_li_project{
-    height: 70px;
+    height: auto;
     display:flex;
     align-items:center;
   }
@@ -290,11 +299,18 @@ button:focus{
   }
 
   .div_li_project h2, .div_li_project textarea {
-    font-size: 25px;
+    font-size: 8px !important;
+    width: 50%;
+    word-break: break-all;
+  }
+
+  .datepicker {
+    width: 40%;
+    font-size: 8px !important;
   }
 
   .div_li_project p, .div_li_project input{
-    font-size: 25px;
+    font-size: 8px;
   }
 
   .li_project .img_edit_pencil{
@@ -310,9 +326,9 @@ button:focus{
   }
 
   #selectUserAll, #selectUserG, #selectUserJ, #selectUserL {
-    width: 130px;
-    height: 130px;
-    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
   }
 
   .addProject {
@@ -320,17 +336,17 @@ button:focus{
     right: 0px;
     margin: auto;
     bottom: 5vh;
-    width: 100px;
-    height: 100px;
+    width: 35px;
+    height: 35px;
   }
 
    .hamburger_menu {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     z-index: 4;
-    right: 50px;
-    top: 50px;
+    right: 20px;
+    top: 20px;
   }
 
 
@@ -342,6 +358,12 @@ button:focus{
   .hamburger_menu {
     display: none;
   }
+
+  .header {
+    min-height: 10vh;
+  }
+
+
 }
 
 .shown {
