@@ -58,3 +58,9 @@ $(document).on('click', '.previous-month', function(){
   }
   getGrid(currentMonth, currentYear)
 })
+
+$(document).on('click', '.date-grid button', function(){
+  console.log($(event.target).data('time'))
+  let dayDate = $(event.target).data('time').toString()
+  window.location.href = `agenda/day.php?d=${dayDate}`
+})

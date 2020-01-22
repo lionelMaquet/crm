@@ -23,7 +23,8 @@ for ($i = 1; $i <= $numberOfDays ; $i++) {
 
 
   if ($currentDate == $today) {
-    echo "<button ><time class='today' datetime='$year-$month-$i'>".$i."</time></button>";
+
+    echo "<button data-time='$year-$month-$i' ><p class='today'>".$i."</p></button>";
   } else {
     echo "<button data-time='$year-$month-$i'><p>".$i."</p></button>";
   }

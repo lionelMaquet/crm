@@ -82,6 +82,10 @@
 
 }
 
+.date-grid button p {
+  pointer-events:none;
+}
+
 .date-grid button {
   min-height: 12vh;
   height:100px;
