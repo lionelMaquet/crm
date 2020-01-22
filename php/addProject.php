@@ -40,7 +40,7 @@ if (!isset($_SESSION['UserLoggedIn']) || $_SESSION['UserLoggedIn'] == false) {
         <ul class="nav_ul list_style_none white">
           <li> <a href="../projet.php">Projet </a></li>
           <li>New idée</li>
-          <li>Agenda</li>
+          <li><a href="agenda.php">Agenda</a></li>
           <li>Contact</li>
         </ul>
 

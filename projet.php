@@ -38,7 +38,7 @@ include "config.php";
         <ul class="nav_ul list_style_none white">
           <li><a href="projet.php">Projet</a></li>
           <li>New idée</li>
-          <li>Agenda</li>
+          <li><a href="php/agenda.php">Agenda</a></li>
           <li>Contact</li>
         </ul>
 
