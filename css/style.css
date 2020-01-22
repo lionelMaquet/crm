@@ -269,6 +269,7 @@ button:focus{
     justify-content:space-around;
     position: relative;
     right: 10px;
+    max-width: 300px;
 
 
   }
@@ -327,13 +328,14 @@ button:focus{
   }
 
   .users {
-    position:relative !important;
+
     right: 0px;
     left: 0px;
     margin: auto;
-    bottom:0px;
+    bottom:20px;
 
     width: 70vw;
+    max-width: 300px;
   }
 
   #selectUserAll, #selectUserG, #selectUserJ, #selectUserL {

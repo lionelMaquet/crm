@@ -91,6 +91,8 @@
 
   .header h1 {
     font-size: 20px !important;
+    position: relative !important;
+    left: 0px !important;
   }
 
   .addProjectTitle {
@@ -104,10 +106,14 @@
   .users {
     position: relative;
     bottom: unset;
-    top: 10vh;
+    margin-top: 20px;
     margin-bottom: 10px;
-    width: 50%;
 
+
+  }
+
+  #datepicker {
+    text-align:left;
   }
 
   input, textarea {
@@ -116,9 +122,9 @@
   }
 
   #selectUserGNewProject, #selectUserJNewProject, #selectUserLNewProject {
-    width: 50px;
-    height: 50px;
-    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
     border-radius: 80px;
   }
 
@@ -136,5 +142,9 @@
     height: 10vh;
     border-radius: 25vw;
     font-size: 12px;
+  }
+
+  .addProjectForm{
+    padding: 10px;
   }
 }
