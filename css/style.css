@@ -277,9 +277,12 @@ button:focus{
     font-size: 12px;
   }
 
+  .li_project {
+    justify-content: normal;
+  }
+
   .li_project a {
     width: 80%;
-    margin-bottom: 10px;
   }
 
   .div_li_project{
@@ -298,10 +301,15 @@ button:focus{
 
   }
 
+  .div_li_project {
+    padding: 10px 10px !important;
+  }
+
   .div_li_project h2, .div_li_project textarea {
     font-size: 8px !important;
     width: 50%;
-    word-break: break-all;
+    word-break: break-word;
+    text-align:left;
   }
 
   .datepicker {
@@ -311,6 +319,7 @@ button:focus{
 
   .div_li_project p, .div_li_project input{
     font-size: 8px;
+    text-align:right;
   }
 
   .li_project .img_edit_pencil{
@@ -318,10 +327,12 @@ button:focus{
   }
 
   .users {
+    position:relative !important;
     right: 0px;
     left: 0px;
     margin: auto;
-    bottom: 10vh;
+    bottom:0px;
+
     width: 70vw;
   }
 
