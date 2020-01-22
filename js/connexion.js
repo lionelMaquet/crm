@@ -1,5 +1,18 @@
 $(document).on('click', '#login_button', function() {
 
+  connectWithLoginAndPassword();
+
+
+})
+
+$(document).on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      connectWithLoginAndPassword();
+    }
+});
+
+function connectWithLoginAndPassword(){
+
   let username = $('#username_input').val();
   let password = $('#password_input').val();
 
@@ -27,5 +40,4 @@ $(document).on('click', '#login_button', function() {
 
   xmlhttp.send();
 
-
-})
+}
